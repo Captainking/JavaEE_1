@@ -34,7 +34,7 @@ public class MultiServer extends Thread{
 			while((inputline=in.readLine())!=null){
 				System.out.println("recive message from client "+clientID+": "+inputline);
 				
-				char[] arr =inputline.toCharArray(); //ÄæĞòÊä³ö×Ö·ûÊı×é
+				char[] arr =inputline.toCharArray(); //é€†åºè¾“å‡ºå­—ç¬¦æ•°ç»„
 				char []arr1 = new char[arr.length];
 				for(int i=arr.length-1;i>=0;i--)
 				{ 
@@ -42,13 +42,13 @@ public class MultiServer extends Thread{
 				}
 				String str=new String(arr1);
 				
-				out.println(str);//·µ»Ø·¢ËÍµ¹ĞğĞÅÏ¢
+				out.println(str);//è¿”å›å‘é€å€’å™ä¿¡æ¯
 				if (inputline.equals("bye")){
 					break;
 				}
 			}
 			
-			System.out.println("ÖÕÖ¹¿Í»§¶Ë"+clientID);
+			System.out.println("ç»ˆæ­¢å®¢æˆ·ç«¯"+clientID);
 			in.close();
 			out.close();
 			clientSocket.close();
@@ -60,7 +60,7 @@ public class MultiServer extends Thread{
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("·şÎñÆ÷¿ªÆô");
+		System.out.println("æœåŠ¡å™¨å¼€å¯");
 		try {
 			serverSocket=new ServerSocket(3333);
 			while(true){
