@@ -22,14 +22,14 @@ public class Client {
 			in=new BufferedReader(new InputStreamReader(cSocket.getInputStream()));
 			BufferedReader stdIn=new BufferedReader(new InputStreamReader(System.in));
 			while((userInput=stdIn.readLine())!=null){
-				System.out.println("¿Í»§¶Ë·¢ËÍÏûÏ¢:"+userInput);
+				System.out.println("å®¢æˆ·ç«¯å‘é€æ¶ˆæ¯:"+userInput);
 				out.println(userInput);
-				System.out.println("¿Í»§¶ËÊÕµ½ÏûÏ¢:"+in.readLine());
+				System.out.println("å®¢æˆ·ç«¯æ”¶åˆ°æ¶ˆæ¯:"+in.readLine());
 				if(userInput.equals("bye")){
 					break;
 				}
 			}
-			System.out.println("¿Í»§¶Ë³ÌĞòÍË³ö");
+			System.out.println("å®¢æˆ·ç«¯ç¨‹åºé€€å‡º");
 			out.close();
 			in.close();
 			cSocket.close();
